@@ -1,0 +1,122 @@
+For Sifa Gospel Fest, the website should feel energetic, faith-centred and event-led—not like a corporate site. Since each edition moves by region, the structure should make the *next festival* the main focus while preserving previous editions as a growing archive.
+
+# Sifa Gospel Fest - Recommended Website Information Architecture
+
+## Primary Navigation
+
+*Home | The Festival | This Year’s Event | Artists | Partners | Media | Contact*
+
+## 1. Home
+
+Purpose: Announce the next festival and drive attendance.
+
+•⁠  ⁠Hero banner
+  - Next host region/city
+  - Date, venue and event theme
+  - Worship in action
+  - Gospel music performances
+•⁠  ⁠Latest news or social-media updates
+•⁠  ⁠Partners and sponsors logos
+•⁠  ⁠Contact and social links
+
+## 2. The Festival
+
+Purpose: Explain the identity and purpose of Sifa Gospel Fest.
+
+•⁠  ⁠*About Sifa Gospel Fest*
+  - Story, purpose and annual vision
+•⁠  ⁠*Festival Experience*
+  - What attendees can expect
+  - Who the event is for
+•⁠  ⁠*Past Editions*
+  - Previous regions, dates, artists, images and highlights
+
+## 3. This Year’s Event
+
+This should be the most prominent menu item and update every year.
+
+•⁠  ⁠*Event Overview*
+  - Theme, date, region/city and venue
+•⁠  ⁠*Programme / Schedule*
+  - Gates open, worship sessions, artist performance times and closing
+•⁠  ⁠*Line-up*
+  - Featured gospel artists, worship leaders, hosts and guest speakers (if any)
+•⁠  ⁠*Venue & Travel*
+  - Map, directions, parking, transport and accommodation guidance (if applicable)
+•⁠  ⁠*Event Guidelines*
+  - Entry requirements, prohibited items, safety and attendee conduct
+
+## 4. Artists
+
+Purpose: Celebrate the performers and make the festival discoverable through artist audiences.
+
+•⁠  ⁠*This Year’s Line-up*
+•⁠  ⁠*Artist Profiles*
+  - Biography, photo, music links and performance information
+•⁠  ⁠*Past Artists*
+  - Archive of performers from previous editions
+
+## 5. Partners
+
+Purpose: Make sponsorship valuable and easy to understand.
+
+•⁠  ⁠*Our Partners & Sponsors*
+  - Sponsor logos, grouped by category where applicable
+•⁠  ⁠*Become a Partner*
+  - Sponsorship opportunities and benefits
+•⁠  ⁠*Sponsor Packages*
+  - Downloadable sponsorship proposal / media kit
+•⁠  ⁠*Partner Enquiry Form*
+•⁠  ⁠*Community & Media Partners*
+
+## 6. Media
+
+Purpose: Build anticipation before the event and preserve its impact afterwards.
+
+•⁠  ⁠*Photo Gallery*
+  - Filterable by year, region or edition
+•⁠  ⁠*Videos*
+  - Highlights, performances, interviews and recaps
+•⁠  ⁠*News & Announcements*
+•⁠  ⁠*Press & Media Resources*
+  - Press releases, brand assets and media accreditation request
+•⁠  ⁠*Social Wall*
+  - Instagram, Facebook, YouTube and TikTok updates
+
+## 7. Contact
+
+•⁠  ⁠General enquiries
+•⁠  ⁠Artist and programme enquiries
+•⁠  ⁠Sponsorship and partnership enquiries
+•⁠  ⁠Telephone, email and social media
+•⁠  ⁠Contact form
+
+## Footer
+
+•⁠  ⁠Quick links
+•⁠  ⁠Next event details
+•⁠  ⁠Partner / sponsor link
+•⁠  ⁠Contact details
+•⁠  ⁠Social-media icons
+•⁠  ⁠Newsletter / WhatsApp sign-up
+•⁠  ⁠Privacy policy and terms
+•⁠  ⁠Copyright
+
+
+===================================
+
+## Future Section: Sifa Gospel Talent Search
+
+The talent-search programme should initially appear as a featured announcement or “Coming Soon” item under *Get Involved*. It should become its own main menu item only when applications and programme details are confirmed.
+
+Suggested future structure:
+
+•⁠  ⁠*Talent Search Overview*
+•⁠  ⁠*How It Works*
+•⁠  ⁠*Eligibility & Rules*
+•⁠  ⁠*Apply Now*
+•⁠  ⁠*Audition Locations & Dates*
+•⁠  ⁠*Judges & Mentors*
+•⁠  ⁠*Contestant Profiles*
+•⁠  ⁠*Results & Winners*
+•⁠  ⁠*Frequently Asked Questions*

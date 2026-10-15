@@ -1,0 +1,62 @@
+{
+  "_note": "Researched 2026-10-15. See SIFA-RESEARCH.md for sources and confidence. null = unknown, ask client.",
+  "festival": {
+    "name": "Sifa Gospel Fest",
+    "altName": "Sifa Gospel Festival",
+    "country": "Tanzania",
+    "slogan": "Kila mwenye pumzi na amsifu Bwana",
+    "sloganEn": "Let everything that has breath praise the Lord (Psalm 150:6)",
+    "tagline": "Ibada kubwa ya kusifu na kuabudu",
+    "entry": "Free (hakuna kiingilio)",
+    "typicalHours": "12:00 - 22:00",
+    "message": ["Amani (peace)", "Matumaini (hope)", "Wokovu (salvation)", "Uponyaji (healing)"],
+    "hashtags": ["#SifaGospelFest2026", "#SifaGospelFestival2026", "#KilaMwenyePumziNaAmsifuBwana"],
+    "brandColors": { "blue": "#3854A4", "orange": "#F06C20" }
+  },
+  "organiser": {
+    "name": "QS Suma Mwaitenda",
+    "roles": ["Main Coordinator", "Chair, Organising Committee"]
+  },
+  "socials": {
+    "instagram": "https://www.instagram.com/sifagospelfest/",
+    "facebook": "https://www.facebook.com/sifagospelfest",
+    "tiktok": "https://www.tiktok.com/@sifagospelfest",
+    "youtube": "https://www.youtube.com/@SifaGospelFest"
+  },
+  "contact": { "email": null, "phone": null, "whatsapp": null },
+  "editions": [
+    {
+      "year": 2026,
+      "regionsPlanned": 6,
+      "stops": [
+        { "order": 1, "region": "Mbeya", "date": "2026-09-05", "venue": null, "lineup": [], "lineupNote": "Singers from Mbeya, Songwe and Dar es Salaam", "videos": ["B0uNeisFU8o", "Ik8LPKmJ8do"] },
+        { "order": 2, "region": "Geita", "date": "2026-09-19", "venue": null, "lineup": ["Rose Muhando", "Bony Mwaitege", "Ambwene Mwasongwe", "Zabron Singers", "Come and Pray (Dickson Maige)"], "videos": ["E7oR2qQgmVw", "i4D3mhjFUUM"] },
+        { "order": 3, "region": "Mwanza", "date": "2026-09-26", "venue": "Uwanja wa Furahisha, Ilemela, Mwanza", "lineup": ["Rose Muhando", "Obby Alpha", "Zabron Singers", "Elia Mtishibi", "Agape Gospel Band", "Baraka Gmen"], "videos": ["XhYi949kti0", "-bh7C9d5e2Q"],
+          "youthTalk": { "date": "2026-09-25", "time": "13:00 - 18:00", "venue": "6th Floor, Living Water Centre, Almas Tower, Mwanza", "theme": "Enlarge • Innovate • Advance (Isaiah 54:2)", "presentedBy": "MACHE x Sifa Gospel Fest 2026",
+            "speakers": [
+              { "name": "Elia Mtishibi", "topic": "Talents Mentorship" },
+              { "name": "QS Mrisho", "topic": "Entrepreneurship" },
+              { "name": "QS Suma Mwaitenda", "topic": "Career Development" },
+              { "name": "Joel Thomas", "topic": "Self awareness" },
+              { "name": "Osward", "topic": "Digital Skills" }
+            ], "video": "QqqA7_nPBhk" } },
+        { "order": 4, "region": "Arusha", "date": "2026-10-10", "time": "12:00 - 22:00", "venue": "Viwanja vya Shule ya Sekondari Sinon, Arusha", "lineup": ["Rose Muhando", "Christina Shusho", "Upendo Nkone", "Paul Clement", "Boaz Danken", "Henrick Mruma", "Eliya Mwantondo", "Neema Gospel Choir", "Agape Gospel Band"], "videos": ["HcOXp_VcY5c", "Kc5dU11dUQc", "asI0UUJvm3c"],
+          "youthTalk": { "date": "2026-10-09", "venue": "Plush Gardens, Arusha", "theme": "Anzia Sokoni: Semina ya vijana, biashara na ujasiriamali", "partners": ["Equity Bank", "BRELA"], "video": "tbf2YggzZbQ" } },
+        { "order": 5, "region": null, "date": null, "venue": null, "lineup": [] },
+        { "order": 6, "region": null, "date": null, "venue": null, "lineup": [] }
+      ]
+    }
+  ],
+  "partners": [
+    { "name": "Clouds Media Group", "type": "media" },
+    { "name": "Global TV / Global Publishers", "type": "media" },
+    { "name": "Timeless Expedition", "type": "partner" },
+    { "name": "Talanta Sports & Events", "type": "partner" },
+    { "name": "Event Set", "type": "partner" },
+    { "name": "Thee Mess", "type": "partner" },
+    { "name": "BRELA", "type": "youth-talk" },
+    { "name": "Equity Bank", "type": "youth-talk" },
+    { "name": "MACHE", "type": "youth-talk" }
+  ],
+  "highlightVideos": ["FskUhOF5nxE", "KILAEtehQhE", "asI0UUJvm3c", "B0uNeisFU8o", "GePmfASKSfE"]
+}

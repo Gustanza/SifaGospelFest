@@ -1,0 +1,181 @@
+/* Design tokens: GenesisExpo "Home 5 / Music Fest" (dark) mapped onto the Sifa brand.
+   Theme pink #fd226a -> Sifa orange, theme purple #7c529c -> Sifa blue,
+   theme darks #070415 / #13111f -> blue-black navy.
+   Spec: docs/design/home5-rebuild-spec.md · Patterns: docs/design/genesisexpo-patterns.md */
+:root {
+  --primary: #f06c20;            /* orange, the theme's pink role */
+  --primary-rgb: 240, 108, 32;
+  --primary-dark: #d9560c;
+  --secondary: #3854a4;          /* brand blue, the theme's purple role (fills, borders) */
+  --secondary-rgb: 56, 84, 164;
+  --secondary-light: #7f9bf0;    /* blue for small text on dark backgrounds */
+
+  --bg: #060a1a;                 /* page background (theme #070415) */
+  --bg-rgb: 6, 10, 26;
+  --surface: #10162c;            /* raised dark panels/cards (theme #13111f) */
+  --surface-rgb: 16, 22, 44;
+  --surface-2: #161e3a;          /* hover / featured dark */
+  --line: rgba(255, 255, 255, 0.1);
+  --ghost: #121a33;              /* giant faded words on --bg */
+  --ghost-on-surface: #182142;   /* giant faded words on --surface panels */
+
+  --heading: #ffffff;
+  --body: #dadada;               /* theme body on dark */
+  --muted: #8a90a8;
+  --meta: #8a90a8;
+
+  --font-heading: 'Rubik', system-ui, sans-serif;
+  --font-body: 'Open Sans', system-ui, sans-serif;
+  --font-mono: 'Anonymous Pro', ui-monospace, monospace;
+  --font-script: 'Mr Dafoe', cursive;
+
+  --radius: 10px;
+  --pill: 50px;
+  --shadow-card: 0 15px 38px 0 rgba(0, 0, 0, 0.35);
+  /* Coloured glows were removed at the client's request (flat, solid buttons). Kept as tokens set to none. */
+  --shadow-primary: none;
+  --shadow-secondary: none;
+  --secondary-dark: #2c4489;
+  /* ONE page width for everything: header rows, boxed panels and section content all share
+     these left/right edges at every screen size. Backgrounds may be full-bleed; content may not. */
+  --container: 1200px;
+  --gutter: 24px;
+  --page: min(var(--container), calc(100% - 2 * var(--gutter)));
+  --header-h: 110px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--body);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--heading);
+  margin: 0 0 12px;
+}
+h1 { font-size: 48px; line-height: 52px; }
+h2 { font-size: 40px; line-height: 52px; }
+h3 { font-size: 36px; line-height: 48px; }
+h4 { font-size: 30px; line-height: 42px; }
+h5 { font-size: 24px; line-height: 36px; }
+h6 { font-size: 20px; line-height: 36px; }
+
+p { margin: 0 0 20px; }
+a { color: var(--primary); text-decoration: none; transition: color 0.3s; }
+img { max-width: 100%; display: block; }
+button { font: inherit; }
+::selection { background: var(--primary); color: #fff; }
+
+.container { width: var(--page); margin-inline: auto; }
+.section { position: relative; padding: 120px 0; }
+
+/* The theme's signature: [bracketed] monospace labels */
+.mono { font-family: var(--font-mono); }
+.bracket::before { content: '['; }
+.bracket::after { content: ']'; }
+
+.lead-center { max-width: 600px; margin: 0 auto 50px; text-align: center; }
+
+/* Pill buttons (theme wgl_button shape). All variants are FLAT SOLID colours, with no glow and no
+   outline-only states (client preference). Hover simply darkens the fill.
+   Blue:   .btn--glow, .btn--outline   (names kept so components don't need changes)
+   Orange: .btn--primary, .btn--outline-orange */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 155px;
+  padding: 14px 30px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  line-height: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
+  border-radius: var(--pill);
+  box-shadow: none !important;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+.btn--m { min-width: 130px; padding: 9px 30px; font-size: 12px; }
+.btn--l { min-width: 145px; padding: 12px 30px; }
+.btn--full { width: 100%; }
+.btn:hover { background: var(--secondary-dark); border-color: var(--secondary-dark); color: #fff; }
+.btn--primary, .btn--outline-orange { background: var(--primary); border-color: var(--primary); }
+.btn--primary:hover, .btn--outline-orange:hover { background: var(--primary-dark); border-color: var(--primary-dark); color: #fff; }
+.btn:focus-visible { outline: 3px solid rgba(var(--primary-rgb), 0.6); outline-offset: 3px; }
+
+/* Shared play button with pulsing rings (theme videobox) */
+.play-btn {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.play-btn:hover { transform: scale(1.06); }
+.play-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #fff;
+  transform: translate(-35%, -50%);
+}
+.play-btn i { position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.8); opacity: 0; animation: pulseCircle 3.9s linear infinite; }
+.play-btn i:nth-child(2) { animation-delay: 1.3s; }
+.play-btn i:nth-child(3) { animation-delay: 2.6s; }
+@keyframes pulseCircle {
+  0% { transform: scale(1); opacity: 0; }
+  20% { transform: scale(1.44); opacity: 0.3; }
+  100% { transform: scale(3.2); opacity: 0; }
+}
+
+/* Reveal-on-scroll (wired in main.js). Stagger with :style="{ '--d': `${i * 0.1}s` }"
+   instead of an inline transition-delay: the delay applies only to the entrance, never to hover. */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s ease var(--d, 0s), transform 0.9s ease var(--d, 0s); }
+.reveal.is-visible { opacity: 1; transform: none; }
+.reveal.is-revealed { transition-delay: 0s; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+@media (max-width: 992px) {
+  .section { padding: 90px 0; }
+  h2 { font-size: 34px; line-height: 44px; }
+}
+@media (max-width: 600px) {
+  :root { --gutter: 16px; }
+  .section { padding: 70px 0; }
+  h2 { font-size: 28px; line-height: 38px; }
+}
