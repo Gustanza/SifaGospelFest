@@ -1,6 +1,6 @@
 # Sifa Gospel Fest: research dossier
 
-Collected 2026-10-15 from public sources: news articles, YouTube, Threads/Instagram metadata
+Collected 2026-10-15 (Dodoma update 2026-10-19, see §3) from public sources: news articles, YouTube, Threads/Instagram metadata
 and press photos. Every fact has a source and a confidence level:
 **✅ confirmed** (stated by an official channel or a named news report) ·
 **🟡 inferred** (derived from evidence; say so if used) · **❓ unknown** (ask the client).
@@ -54,7 +54,7 @@ The series covers **six regions**. Four were done by 15 Oct 2026; **regions 5 an
 | 2 | **Geita** | **Sat 19 Sep 2026** | ❓ not published ("Mjini Geita", open-air with a big blue stage tent) | **Rose Muhando, Bony Mwaitege, Ambwene (Mwasongwe), Zabron Singers**; local acts incl. Come and Pray (Dickson Maige, ft. Eric Joe) | Date ✅ (official live stream start 19 Sep), line-up ✅ (official stream titles) |
 | 3 | **Mwanza** | **Sat 26 Sep 2026** | **Uwanja wa Furahisha, Ilemela Municipality, Mwanza** | **Rose Muhando, Obby Alpha, Zabron Singers, Elia Mtishibi**, Agape Gospel Band, Baraka Gmen ("Messiah"). Crowd of "thousands" | ✅ Global Publishers |
 | 4 | **Arusha** | **Sat 10 Oct 2026**, 12:00–22:00 | **Viwanja vya Shule ya Sekondari Sinon (Sinoni), Arusha** | **Rose Muhando, Christina Shusho, Upendo Nkone, Paul Clement, Boaz Danken, Henrick Mruma, Eliya Mwantondo, Neema Gospel Choir, Agape Gospel Band** + singers from Arusha and Kilimanjaro | ✅ official channel, Arusha Digital, press banner |
-| 5 | ❓ | ❓ | ❓ | ❓ | Ask client |
+| 5 | **Dodoma** | **Sat 24 Oct 2026**, 10:00–22:00 ("Saa 4 Asubuhi hadi Saa 4 Usiku") | **Chinangali Park, Dodoma** | Announced so far (one post each, 18 Oct): **Upendo Nkone, Henrick Mruma, Ambwene Mwasongwe**. The main poster also shows a navy-and-white choir and a woman in a navy captain's cap (they look like Neema Gospel Choir and Rose Muhando's poster art) 🟡 not named | ✅ official Instagram ([Upendo](https://www.instagram.com/p/Deod_STxDAy/), [Henrick](https://www.instagram.com/p/Deo263sumPN/), [Ambwene](https://www.instagram.com/p/DepYuSSxo-O/)), [Chinangali Park post](https://www.instagram.com/p/Deo7VD5I1qP/) |
 | 6 | ❓ | ❓ | ❓ | ❓ | Ask client |
 
 Notes
@@ -64,6 +64,10 @@ Notes
 - One Mwanza poster (Inland TV) carries an alternate tagline: **"Ni neema • Ni upendo • Ni matumaini"** (It is grace • love • hope). 🟡 possibly a regional sub-theme.
 
 ---
+
+Dodoma notes (19 Oct): the street team is out ("Dodoma tupo mitaani… Sifa Gospel Festival imewasili Dodoma"), the
+venue itself is promoting it (@chinangali_park: "Tarehe 24/10/2026 Tuje tuijaze Chinangali"), and posts carry a new hashtag
+**#BestGospelEventOfTheYear**. Official posters saved in [images/dodoma/](images/dodoma/).
 
 ## 4. Sifa Youth Talk (side programme)
 
@@ -126,7 +130,7 @@ We need **official artist photos and bios** from the client. The poster cut-outs
 
 | Channel | Handle / URL | Stats (15 Oct 2026) | Conf. |
 |---|---|---|---|
-| Instagram | [@sifagospelfest](https://www.instagram.com/sifagospelfest/) | **7,475 followers · 63 following · 1,233 posts**. Bio: "Ibada kubwa Ya Kusifu / Kila Mwenye Pumzi Na Amsifu Bwana" | ✅ |
+| Instagram | [@sifagospelfest](https://www.instagram.com/sifagospelfest/) | **7,475 followers · 63 following · 1,233 posts** (15 Oct); **8,114 followers · 65 following · 1,257 posts** (19 Oct). Bio: "Ibada kubwa Ya Kusifu / Kila Mwenye Pumzi Na Amsifu Bwana" | ✅ |
 | Facebook | @sifagospelfest | n/a (login wall) | ✅ handle (from YouTube description) |
 | TikTok | @sifagospelfest | n/a (login wall) | ✅ handle |
 | YouTube | [Sifa Gospel Festival, @SifaGospelFest](https://www.youtube.com/@SifaGospelFest) (channel UC1PUfDVdT1sw-OH2sV0rnEQ) | 189 subscribers, 8 videos + live streams | ✅ |
@@ -213,7 +217,7 @@ The master logo is `../SIFA GOSPEL FEST LOGO.png` (2481×1536, transparent).
 
 ## 11. Open questions for the client
 
-1. Regions **5 and 6** for 2026: city, date, venue, line-up? Which one is the "next festival" for the homepage hero?
+1. ~~Region 5~~ answered: Dodoma, 24 Oct, Chinangali Park (see §3). Still open: the **full Dodoma line-up**, a **Dodoma Youth Talk** (none announced by 19 Oct), and **region 6** (the site assumes a Dar es Salaam Grand Finale on 7 Nov: unconfirmed).
 2. **Mbeya and Geita venues** (not published anywhere online).
 3. Were there **editions before 2026** (the Instagram account has 1,233 posts)?
 4. Official **contact email, phone and WhatsApp**; organising entity's legal name.

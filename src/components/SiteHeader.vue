@@ -25,20 +25,38 @@ const searchInput = ref(null)
 const menuClose = ref(null)
 let lastFocus = null
 
-// ---- scroll: sticky bar + simple scroll-spy over the top-level nav targets ----
-const spyIds = [...new Set(nav.map((n) => n.href))]
+// ---- scroll: sticky bar + scroll-spy ----
+// Every section linked from the menu (dropdown targets included) maps to the top-level item that
+// owns it (a top-level href wins; a target under two parents goes to the later one).
+// Walking the sections in page order, the underline may only stay or step ONE item to the right:
+// a section whose owner would skip ahead or jump back keeps the underline of the section above it,
+// so scrolling reads Home → The Festival → This Year's Event → Partners → Artists → Media → Contact.
+const owner = {}
+for (const n of nav) for (const c of n.children || []) owner[c.href] = n.href
+for (const n of nav) owner[n.href] = n.href
+const order = nav.map((n) => n.href)
+let spy = []   // [{ el, href }] in page order
+const buildSpy = () => {
+  const els = Object.keys(owner).map((id) => document.querySelector(id)).filter(Boolean)
+  els.sort((a, b) => (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1))
+  let step = 0
+  spy = els.map((el) => {
+    const i = order.indexOf(owner[`#${el.id}`])
+    if (i === step + 1) step = i
+    return { el, href: order[step] }
+  })
+}
 let ticking = false
 const update = () => {
   ticking = false
   sticky.value = window.scrollY > 300
   const line = window.innerHeight * 0.35
-  let current = spyIds[0]
-  let bestTop = -Infinity
-  for (const id of spyIds) {
-    const el = document.querySelector(id)
-    if (!el) continue
-    const top = el.getBoundingClientRect().top
-    if (top <= line && top > bestTop) { bestTop = top; current = id }
+  const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
+  let current = order[0]
+  for (const s of spy) {
+    const top = s.el.getBoundingClientRect().top
+    // at the very bottom the last sections may never reach the line, so count anything on screen
+    if (top <= line || (atBottom && top < window.innerHeight)) current = s.href
   }
   active.value = current
 }
@@ -79,7 +97,7 @@ const keywords = [
   { words: 'schedule programme time youth talk festival day', href: '#programme' },
   { words: 'free ticket tickets entry pass passes price cost kiingilio volunteer', href: '#passes' },
   { words: 'singer singers minister ministers lineup line-up choir band guests', href: '#artists' },
-  { words: 'venue dodoma jamhuri location where', href: '#venue' },
+  { words: 'venue dodoma chinangali location where', href: '#venue' },
   { words: 'tour route regions mbeya geita mwanza arusha dar es salaam finale', href: '#tour' },
   { words: 'photo photos gallery pictures instagram', href: '#gallery' },
   { words: 'video videos news live stream youtube', href: '#media' },
@@ -114,6 +132,7 @@ onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
   window.addEventListener('resize', onResize)
   document.addEventListener('keydown', onKey)
+  buildSpy()
   update()
 })
 onBeforeUnmount(() => {

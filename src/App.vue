@@ -4,7 +4,6 @@ import { ref } from 'vue'
 import SiteHeader from './components/SiteHeader.vue'
 import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
-import CountdownBar from './components/CountdownBar.vue'
 import DreamSection from './components/DreamSection.vue'
 import ProgrammeSection from './components/ProgrammeSection.vue'
 import PartnersStrip from './components/PartnersStrip.vue'
@@ -29,7 +28,6 @@ const play = (id) => { videoId.value = id }
   <main>
     <HeroSection @play="play" />
     <AboutSection />
-    <CountdownBar />
     <DreamSection @play="play" />
     <ProgrammeSection />
     <PartnersStrip />

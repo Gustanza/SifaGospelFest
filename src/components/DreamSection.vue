@@ -1,6 +1,6 @@
 <script setup>
 // Theme Home 5 "Image Your Dream": boxed duotone photo panel with a big title, venue line and the
-// pulsing play button. Pulled up over the countdown panel like the theme (margin-top: -140px).
+// pulsing play button. (The countdown it used to overlap now lives in the hero's Next Stop pass.)
 import { nextStop } from '../data/festival.js'
 
 defineEmits(['play'])
@@ -40,7 +40,7 @@ defineEmits(['play'])
 </template>
 
 <style scoped>
-.dream { position: relative; z-index: 1; margin-top: -140px; }
+.dream { position: relative; z-index: 1; }
 .dream__defs { position: absolute; }
 .dream__box { width: var(--page); }
 .dream__panel {
@@ -87,12 +87,10 @@ defineEmits(['play'])
 .dream__play:focus-visible { outline: 3px solid #fff; outline-offset: 6px; }
 
 @media (max-width: 992px) {
-  .dream { margin-top: -120px; }
   .dream__panel { min-height: 520px; }
   .dream__title { font-size: 56px; line-height: 60px; }
 }
 @media (max-width: 600px) {
-  .dream { margin-top: -90px; }
   .dream__panel { min-height: 460px; }
   /* the narrow panel shows the photo's full height: scale from the bottom to hide the stage banner */
   .dream__photo, .dream__panel:hover .dream__photo { object-position: 35% 100%; transform: scale(1.42); transform-origin: 40% 100%; }

@@ -42,7 +42,7 @@
             ], "video": "QqqA7_nPBhk" } },
         { "order": 4, "region": "Arusha", "date": "2026-10-10", "time": "12:00 - 22:00", "venue": "Viwanja vya Shule ya Sekondari Sinon, Arusha", "lineup": ["Rose Muhando", "Christina Shusho", "Upendo Nkone", "Paul Clement", "Boaz Danken", "Henrick Mruma", "Eliya Mwantondo", "Neema Gospel Choir", "Agape Gospel Band"], "videos": ["HcOXp_VcY5c", "Kc5dU11dUQc", "asI0UUJvm3c"],
           "youthTalk": { "date": "2026-10-09", "venue": "Plush Gardens, Arusha", "theme": "Anzia Sokoni: Semina ya vijana, biashara na ujasiriamali", "partners": ["Equity Bank", "BRELA"], "video": "tbf2YggzZbQ" } },
-        { "order": 5, "region": null, "date": null, "venue": null, "lineup": [] },
+        { "order": 5, "region": "Dodoma", "date": "2026-10-24", "time": "10:00 - 22:00", "venue": "Chinangali Park, Dodoma", "lineup": ["Upendo Nkone", "Henrick Mruma", "Ambwene Mwasongwe"], "lineupNote": "Announced one minister per post on the official Instagram, 18 Oct 2026; more may follow", "sources": ["https://www.instagram.com/p/Deod_STxDAy/", "https://www.instagram.com/p/Deo263sumPN/", "https://www.instagram.com/p/DepYuSSxo-O/", "https://www.instagram.com/p/Deo7VD5I1qP/"], "youthTalk": null },
         { "order": 6, "region": null, "date": null, "venue": null, "lineup": [] }
       ]
     }

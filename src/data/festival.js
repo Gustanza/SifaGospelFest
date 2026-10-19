@@ -12,19 +12,26 @@ export const festival = {
   organiser: 'QS Suma Mwaitenda',
 }
 
+// Dodoma confirmed by the official Instagram on 18 Oct 2026 (Chinangali Park, 24/10/2026,
+// "Saa 4 Asubuhi hadi Saa 4 Usiku" = 10 AM to 10 PM). Line-up is announced one minister per post:
+// those artists carry `next: true` below.
+// The Youth Talk date is still our guess (the day before, as in Mwanza and Arusha): unconfirmed.
 export const nextStop = {
-  draft: true,
   region: 'Dodoma',
-  date: '2026-10-24T12:00:00+03:00',
+  date: '2026-10-24T10:00:00+03:00',
+  end: '2026-10-24T22:00:00+03:00',
   dateLabel: 'Saturday, 24 October 2026',
   shortDate: 'Sat 24 Oct 2026',
-  venue: 'Viwanja vya Jamhuri, Dodoma',
-  hours: '12:00 PM – 10:00 PM',
+  venue: 'Chinangali Park, Dodoma',
+  hours: '10:00 AM – 10:00 PM',
+  source: 'https://www.instagram.com/sifagospelfest/',
   youthTalk: 'Friday, 23 October 2026',
+  youthTalkDraft: true,
 }
 
 // Primary navigation from the client IA brief (SifaResources/ShortDesc.txt).
 // `children` render as the theme's white dropdown panels; items with children get a chevron.
+// Order follows the page (Partners strip sits above Artists) so the scroll-spy underline steps left to right.
 export const nav = [
   { label: 'Home', href: '#home' },
   { label: 'The Festival', href: '#festival', children: [
@@ -39,11 +46,11 @@ export const nav = [
     { label: '2026 Tour Route', href: '#tour' },
     { label: 'Sifa Youth Talk', href: '#passes' },
   ] },
-  { label: 'Artists', href: '#artists' },
   { label: 'Partners', href: '#partners', children: [
     { label: 'Our Partners', href: '#partners' },
     { label: 'Become a Partner', href: '#contact' },
   ] },
+  { label: 'Artists', href: '#artists' },
   { label: 'Media', href: '#media', children: [
     { label: 'Photo Gallery', href: '#gallery' },
     { label: 'Videos', href: '#media' },
@@ -57,7 +64,7 @@ export const tour = [
   { region: 'Geita', date: 'Sat 19 Sep', venue: 'Geita Town', status: 'done', image: '/images/poster-geita.jpg' },
   { region: 'Mwanza', date: 'Sat 26 Sep', venue: 'Uwanja wa Furahisha, Ilemela', status: 'done', image: '/images/poster-mwanza.jpg' },
   { region: 'Arusha', date: 'Sat 10 Oct', venue: 'Viwanja vya Sinon', status: 'done', image: '/images/poster-arusha.jpg' },
-  { region: 'Dodoma', date: 'Sat 24 Oct', venue: 'Viwanja vya Jamhuri', status: 'next', draft: true },
+  { region: 'Dodoma', date: 'Sat 24 Oct', venue: 'Chinangali Park', status: 'next' },
   { region: 'Dar es Salaam', date: 'Sat 7 Nov', venue: 'Grand Finale · TBC', status: 'finale', draft: true },
 ]
 
@@ -78,7 +85,7 @@ export const programme = [
     title: 'Festival Day',
     subtitle: 'Saturday · Main Stage',
     items: [
-      { time: '12:00 PM', title: 'Gates Open', text: 'Free entry for everyone: families, believers and non-believers. Food and water vendors on site.', image: '/images/geita-crowd.jpg' },
+      { time: '10:00 AM', title: 'Gates Open', text: 'Free entry for everyone: families, believers and non-believers. Food and water vendors on site.', image: '/images/geita-crowd.jpg' },
       { time: '1:00 PM', title: 'Opening Praise & Local Choirs', text: 'Choirs and worship teams from the host region open the service of praise.', image: '/images/geita-stage.jpg' },
       { time: '3:00 PM', title: 'Emerging Artists Stage', text: 'Sifa gives a big platform to new gospel voices who have never had one before.', image: '/images/baraka-gmen.jpg' },
       { time: '6:00 PM', title: 'Word & Prayer for the Nation', text: 'A moment of prayer for peace, hope, salvation and healing in Tanzania.', image: '/images/hero-stage.jpg' },
@@ -87,20 +94,33 @@ export const programme = [
   },
 ]
 
+// `next: true` = announced for the next stop (Dodoma) on the official Instagram, 18 Oct 2026.
+// Those lead the grid. Ambwene's portrait is cropped from his official Dodoma poster.
 export const artists = [
+  { name: 'Upendo Nkone', role: 'Gospel Singer', image: '/images/artists/upendo-nkone.jpg', next: true },
+  { name: 'Henrick Mruma', role: 'Gospel Singer', image: '/images/artists/henrick-mruma.jpg', next: true },
+  { name: 'Ambwene Mwasongwe', role: 'Gospel Singer', image: '/images/artists/ambwene-mwasongwe.jpg', next: true },
   { name: 'Rose Muhando', role: 'Gospel Legend', image: '/images/artists/rose-muhando.jpg', video: 'KILAEtehQhE' },
   { name: 'Christina Shusho', role: 'Worship Minister', image: '/images/artists/christina-shusho.jpg' },
-  { name: 'Upendo Nkone', role: 'Gospel Singer', image: '/images/artists/upendo-nkone.jpg' },
   { name: 'Boaz Danken', role: 'Worship Leader', image: '/images/artists/boaz-danken.jpg' },
-  { name: 'Henrick Mruma', role: 'Gospel Singer', image: '/images/artists/henrick-mruma.jpg' },
-  { name: 'Eliya Mwantondo', role: 'Gospel Singer', image: '/images/artists/eliya-mwantondo.jpg' },
   { name: 'Agape Gospel Band', role: 'Seben Praise Band', image: '/images/artists/agape-gospel-band.jpg', video: 'FskUhOF5nxE' },
   { name: 'Neema Gospel Choir', role: 'Choir', image: '/images/artists/neema-gospel-choir.jpg' },
 ]
 
-export const alsoFeatured = ['Zabron Singers', 'Paul Clement', 'Obby Alpha', 'Bony Mwaitege', 'Ambwene Mwasongwe', 'Elia Mtishibi', 'Baraka Gmen', 'Come and Pray']
+export const alsoFeatured = ['Zabron Singers', 'Paul Clement', 'Eliya Mwantondo', 'Obby Alpha', 'Bony Mwaitege', 'Elia Mtishibi', 'Baraka Gmen', 'Come and Pray']
 
-export const partners = ['Clouds Media', 'Global TV', 'Timeless Expedition', 'Talanta Sports', 'Event Set', 'Equity Bank', 'BRELA']
+// Logos (client files, 19 Oct 2026) live in public/images/partners/ as single-tone white PNGs, trimmed to their ink.
+// aspect = width / height of the trimmed logo; ink = share of that box that is painted (for optical sizing).
+// Order alternates wide wordmarks and compact marks around the round Timeless emblem in the middle.
+export const partners = [
+  { name: 'Clouds Media Group', logo: '/images/partners/clouds-media.png', aspect: 3.78, ink: 0.37 },
+  { name: 'Equity Bank', logo: '/images/partners/equity-bank.png', aspect: 1.546, ink: 0.41 },
+  { name: 'Global TV', logo: '/images/partners/global-tv.png', aspect: 3.613, ink: 0.44 },
+  { name: 'Timeless Expedition', logo: '/images/partners/timeless-expedition.png', aspect: 0.946, ink: 0.26 },
+  { name: 'Talanta Sports', logo: '/images/partners/talanta-sports.png', aspect: 2.957, ink: 0.3 },
+  { name: 'Event Set', logo: '/images/partners/event-set.png', aspect: 1.786, ink: 0.22 },
+  { name: 'BRELA', logo: '/images/partners/brela.png', aspect: 4.224, ink: 0.46 },
+]
 
 export const counters = [
   { value: 6, suffix: '', label: 'Regions' },
@@ -123,7 +143,7 @@ export const videos = [
 ]
 
 export const news = [
-  { title: 'Sifa Gospel Fest lands in Arusha: top gospel singers to light up Sinon', source: 'Arusha Digital', date: 'October 2026', category: 'Announcement', image: '/images/arusha-presser.jpg', href: 'https://www.arushadigital.com/2026/10/tamasha-kubwa-la-sifa-gospel-fest-kutua.html' },
+  { title: 'Dodoma line-up: Upendo Nkone, Henrick Mruma and Ambwene Mwasongwe to minister at Chinangali Park', source: 'Sifa Gospel Fest', date: '18 October 2026', category: 'Line-up', image: '/images/poster-dodoma.jpg', href: 'https://www.instagram.com/p/Deod_STxDAy/' },
   { title: 'Mwanza ends with a bang as gospel stars light up Furahisha', source: 'Global Publishers', date: '27 September 2026', category: 'Recap', image: '/images/hero-stage.jpg', href: 'https://globalpublishers.co.tz/2026/09/27/sifa-gospel-fest-2026-yamalizika-kwa-kishindo-mwanza-mastaa-wa-gospel-wakiwasha-video/' },
   { title: 'Sifa Youth Talk connects young people with life opportunities', source: 'Global Publishers', date: '26 September 2026', category: 'Youth Talk', image: '/images/youth-talk-mwanza.jpg', href: 'https://globalpublishers.co.tz/2026/09/26/sifa-gospel-fest-2026-suma-awaunganisha-vijana-na-fursa-za-maisha-video/' },
 ]

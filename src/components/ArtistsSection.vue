@@ -4,7 +4,7 @@
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
 import DoubleHeading from './DoubleHeading.vue'
 import SocialIcon from './SocialIcon.vue'
-import { artists, alsoFeatured, socials } from '../data/festival.js'
+import { artists, alsoFeatured, socials, nextStop } from '../data/festival.js'
 defineEmits(['play'])
 
 const sifa = (icon) => socials.find((s) => s.icon === icon)?.href
@@ -43,7 +43,10 @@ const ytSearch = (name) => `https://www.youtube.com/results?search_query=${encod
         </p>
 
         <ul class="grid" role="list">
-          <li v-for="(a, i) in artists" :key="a.name" class="card reveal" :style="{ '--d': `${(i % 4) * 0.1}s` }">
+          <li v-for="(a, i) in artists" :key="a.name" class="card reveal" :class="{ 'is-next': a.next }" :style="{ '--d': `${(i % 4) * 0.1}s` }">
+            <span v-if="a.next" class="card__next">
+              <span class="card__next-dot" aria-hidden="true"></span>{{ nextStop.region }} · {{ nextStop.shortDate.replace(/^\w+ | \d{4}$/g, '') }}
+            </span>
             <div class="card__img">
               <img :src="a.image" :alt="`Portrait of ${a.name}`" width="420" height="420" loading="lazy" />
             </div>
@@ -94,6 +97,7 @@ const ytSearch = (name) => `https://www.youtube.com/results?search_query=${encod
   gap: 30px;
 }
 .card {
+  position: relative;
   padding: 30px 30px 26px;
   border-radius: var(--radius);
   text-align: center;
@@ -101,6 +105,31 @@ const ytSearch = (name) => `https://www.youtube.com/results?search_query=${encod
 }
 .card:hover, .card:focus-within { background: rgba(255, 255, 255, 0.025); box-shadow: 0 15px 38px rgba(0, 0, 0, 0.45); }
 
+/* announced for the next stop: theme category chip straddling the photo top, orange ring on the photo */
+.card__next {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 13px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--primary);
+  border-radius: var(--pill);
+  transform: translateX(-50%);
+}
+.card__next-dot { width: 6px; height: 6px; border-radius: 50%; background: #fff; animation: nextBlink 1.6s ease-in-out infinite; }
+@keyframes nextBlink { 50% { opacity: 0.25; } }
+.card.is-next .card__img { box-shadow: 0 0 0 3px var(--surface), 0 0 0 5px var(--primary); }
 .card__img { border-radius: 50%; overflow: hidden; aspect-ratio: 1; background: var(--bg); }
 .card__img img {
   width: 100%;
@@ -192,6 +221,7 @@ const ytSearch = (name) => `https://www.youtube.com/results?search_query=${encod
   .card__icons a, .card__icons button { width: 30px; font-size: 14px; }
   .card__name { margin-top: 16px; font-size: 18px; }
   .card__role { font-size: 13px; }
+  .card__next { top: 4px; padding: 3px 10px; font-size: 10px; letter-spacing: 0.06em; }
   .also { margin-top: 36px; padding-top: 30px; }
   .also__list li { font-size: 15px; }
   .also__list li + li::before { margin: 0 9px; }

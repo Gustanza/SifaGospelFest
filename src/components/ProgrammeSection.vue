@@ -41,7 +41,7 @@ const toggle = (key) => { open.value = open.value === key ? '' : key }
       <div class="prog__inner">
         <DoubleHeading bg="Schedule" bg-color="var(--ghost-on-surface)" subtitle="This Year's Event" :title="`${nextStop.region} Programme`" />
         <p class="lead-center prog__lead">
-          {{ nextStop.dateLabel }} at {{ nextStop.venue }}. Gates open at noon and the praise runs
+          {{ nextStop.dateLabel }} at {{ nextStop.venue }}. Gates open at 10 AM and the praise runs
           until 10 PM, with the Sifa Youth Talk the day before. Entry is free for everyone.
         </p>
 

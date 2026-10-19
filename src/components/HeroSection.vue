@@ -1,7 +1,9 @@
 <script setup>
 // Home 5 hero: full-bleed graded concert photo, the giant block letter with a brush script across it
-// (theme pink "M" + "Music Fest" -> orange "S" + "Sifa Gospel Fest"), mono date line, copy and two pills.
-import { nextStop } from '../data/festival.js'
+// (theme pink "M" + "Music Fest" -> orange "S" + "Sifa Gospel Fest"), mono slogan line, then the
+// "Next Stop" pass (where, when, live countdown, route, CTAs) docked at the bottom.
+import { festival } from '../data/festival.js'
+import NextStopTicket from './NextStopTicket.vue'
 
 defineEmits(['play'])
 </script>
@@ -38,18 +40,10 @@ defineEmits(['play'])
         <h1 id="hero-title" class="hero__script">
           <span class="hero__l1">Sifa Gospel</span> <span class="hero__l2">Fest</span>
         </h1>
-        <p class="hero__date mono">[Next stop: {{ nextStop.region }} · {{ nextStop.shortDate }} · Free Entry]</p>
+        <p class="hero__date mono" lang="sw">[{{ festival.slogan }}]</p>
       </div>
 
-      <p class="hero__text">
-        A free, open-air service of praise and worship touring the regions of Tanzania. The nation’s favourite
-        gospel ministers, choirs and new voices on one big stage. Kila mwenye pumzi na amsifu Bwana.
-      </p>
-
-      <div class="hero__actions">
-        <a href="#passes" class="btn btn--glow">Join Free</a>
-        <button type="button" class="btn btn--outline-orange" @click="$emit('play', 'XhYi949kti0')">Watch Live</button>
-      </div>
+      <NextStopTicket class="hero__pass" @play="$emit('play', $event)" />
     </div>
   </section>
 </template>
@@ -122,11 +116,11 @@ defineEmits(['play'])
 /* ---------- lockup ----------
    Theme proportions: block letter ~430x404, brush script one line ~2.8x the letter width
    crossing it at mid-height, mono date line over the letter's lower third. */
-.hero__inner { position: relative; display: flex; flex-direction: column; align-items: center; padding: 180px 0 70px; text-align: center; }
+.hero__inner { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: max(100vh, 760px); padding: 140px 0 48px; text-align: center; }
 .hero__lockup {
   position: relative;
   width: 100%;
-  height: 430px;
+  height: 400px;
 }
 .hero__letter {
   position: absolute;
@@ -181,22 +175,7 @@ defineEmits(['play'])
   animation: fadeUpY 1.1s 1.8s cubic-bezier(0.65, 0, 0.35, 1) both;
 }
 
-.hero__text {
-  max-width: 560px;
-  margin: -8px auto 0;
-  color: #fff;
-  font-size: 16px;
-  line-height: 30px;
-  animation: fadeUpY 1s 2.1s ease both;
-}
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px 10px;
-  margin-top: 40px;
-  animation: fadeUpY 1s 2.4s ease both;
-}
+.hero__pass { margin-top: 44px; animation: fadeUpY 1s 1.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
 @keyframes lockIn { from { opacity: 0; transform: translateX(-50%) scale(0.9); } to { opacity: 1; transform: translateX(-50%) scale(1); } }
 @keyframes fadeUp { from { opacity: 0; translate: 0 50px; } to { opacity: 1; translate: 0 0; } }
@@ -208,22 +187,21 @@ defineEmits(['play'])
   .hero__date { font-size: 32px; }
 }
 @media (max-width: 992px) {
-  .hero__inner { padding-top: 160px; }
-  .hero__lockup { height: 380px; }
+  .hero__inner { padding-top: 150px; }
+  .hero__lockup { height: 360px; }
   .hero__date { font-size: 26px; line-height: 44px; }
 }
 /* stacked lockup on small screens */
 @media (max-width: 767px) {
   .hero { min-height: 0; }
-  .hero__inner { padding: 118px 0 90px; }
+  .hero__inner { min-height: 0; padding: 118px 0 70px; }
   .hero__lockup { height: 330px; }
   .hero__script { inset: 0; top: 0; left: 0; transform: none; font-size: 96px; word-spacing: normal; white-space: normal; }
   .hero__script span { position: absolute; left: 50%; white-space: nowrap; }
   .hero__l1 { top: 74px; transform: translateX(-56%) rotate(-4deg); }
   .hero__l2 { top: 158px; transform: translateX(-4%) rotate(-4deg); }
   .hero__date { top: auto; bottom: -6px; padding: 0 6px; font-size: 20px; line-height: 30px; white-space: normal; }
-  .hero__text { margin-top: 44px; font-size: 15px; line-height: 27px; }
-  .hero__actions { margin-top: 30px; }
+  .hero__pass { margin-top: 40px; }
 }
 @media (max-width: 520px) {
   .hero__lockup { height: 270px; }
